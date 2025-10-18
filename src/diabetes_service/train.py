@@ -1,7 +1,7 @@
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import Ridge
+from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import mean_squared_error
 import joblib, json
@@ -24,7 +24,7 @@ def main():
     # 3. define pipeline: scaler + linear regression
     pipe = Pipeline([
         ("scaler", StandardScaler()),
-        ("model", Ridge(alpha=1.0))
+        ("model", LinearRegression())
     ])
 
     # 4. train
