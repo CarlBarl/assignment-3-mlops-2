@@ -32,7 +32,8 @@ def main():
 
     # 5. evaluate
     preds = pipe.predict(X_test)
-    rmse = float(mean_squared_error(y_test, preds, squared=False))
+    mse = mean_squared_error(y_test, preds)
+    rmse = float(np.sqrt(mse))
     print(f"RMSE: {rmse:.2f}")
 
     # 6. save model + metrics
