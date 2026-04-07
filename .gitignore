@@ -1,0 +1,8 @@
+
+# AI dev artifacts
+AGENTS.md
+CLAUDE.md
+.claude/
+
+# macOS
+.DS_Store
